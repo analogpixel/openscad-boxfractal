@@ -32,7 +32,13 @@ module smallBox(cs=5) {
         for (i = [0,90,180,270]){ rotate(i, [0,1,0]) cylinder(cs*2, cs/4,center=true); }
       }
 
-      for (i = [90,270]){ rotate(i, [1,0,0]) cylinder(cs*2, cs/4, center=true); }
+      // for (i = [90,270]){ rotate(i, [1,0,0]) cylinder(cs*2, 3, center=true); }
+      
+      // the hole through the cube 
+      rotate(270, [1,0,0]) cylinder(100, 4, center=true); 
+
+      // the indent for the LED to sit in
+      translate([ 0,cs,0]) rotate(270, [1,0,0]) cylinder(cs+5, 4, center=true); 
     } 
   }
 

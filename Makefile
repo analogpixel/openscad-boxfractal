@@ -8,6 +8,12 @@ endef
 # _bigBox : box that can hold other boxes
 # _smallBox : fits into bigBox
 
+open:
+	$(bin) $(fn)
+
+open2:
+	$(bin) blender-fractal.scad
+
 box1_60:
 	$(create-part) -D "_cs=60" -D "_bigBox=true" 
 
